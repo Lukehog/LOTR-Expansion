@@ -1,0 +1,6 @@
+{
+	"cards": [
+		{"ref": "Gollum.png", "cost": 2},
+		{"ref": "Gandalf_the_White.png", "cost": 2}
+	]
+}
