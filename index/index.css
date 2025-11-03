@@ -1,0 +1,134 @@
+@font-face {
+    font-family: minionPro;
+    src: url(minionPro.ttf);
+}
+
+body {
+    padding: 0;
+    margin: 10px;
+    background: #392119;
+    box-sizing: border-box; /* Ensure padding and borders are included in width/height */
+}
+
+* {
+    box-sizing: inherit; /* Inherit box-sizing from body */
+    font-family: MinionPro;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space_between;
+    position: relative; /* Set position to relative for absolute positioning of title */
+    margin: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    color: #daa520;
+    text-shadow: 1px 1px 2px black;
+    margin: 10px;
+}
+
+#searchBar {
+    width: 200px;
+    padding: 10px;
+    font-family: "Times New Roman";
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    color: #EDB526;
+    background-color: #754029;
+    margin-right: 50px; /* Space between search bar and title */
+}
+
+#searchBar::placeholder {
+    font-family: "Times New Roman";
+    font-size: 15px;
+    font-weight: 500;
+    color: #B0861C;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.grid-header {
+    text-align: center;
+    font-size: 30px;
+    color: #daa520;
+    text-shadow: 1px 1px 2px black;
+    padding: 0;
+    margin: 20px 20px 10px 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 800px; /* Maximum width of the grid */
+    margin: 0 auto; /* Center the grid */
+    gap: 10px; /* Space between grid items */
+    padding: 0 10px; /* Optional: Add padding to prevent items from touching the edges */
+}
+
+.card-grid img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(1px 1px 2px #262626);
+    transition: transform 0.2s;
+    align-self: center;
+}
+
+.card-grid img.removed {
+    display: hidden;
+}
+
+/* Styles for the overlay and enlarged image */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures full width */
+    height: 100%; /* Ensures full height */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top */
+}
+
+.overlay img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.removeCard {
+    position: absolute;
+    right: 30px;
+    padding: 5px;
+    background-color: #D1341F;
+    border: none;
+    color: white;
+    font-family: "Arial";
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+#nonSupplyCardGrid {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    //border-bottom: 2px solid black;
+}
+
+.grid-container {
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden; /* Hides element without affecting layout */
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible; /* Shows element */
+}

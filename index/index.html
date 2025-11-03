@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Grid Viewer</title>
+    <link href="index.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="header">
+        <input type="text" id="searchBar" placeholder="Search for a card..." />
+        <h1 class="title">Lord of the Rings Expansion</h1>
+    </div>
+
+    <div class="grid-container">
+        <h2 class="grid-header">Supply</h2>
+        <div class="card-grid visible" id="cardGrid"></div>
+    </div>
+
+    <div class="grid-container">
+        <h2 class="grid-header">Non-Supply</h2>
+        <div class="card-grid visible" id="nonSupplyCardGrid"></div>
+    </div>
+
+    <div class="grid-container">
+        <h2 class="grid-header">Misc Supply</h2>
+        <div class="card-grid visible" id="miscCardGrid"></div>
+    </div>
+
+    <div class="grid-container">
+        <h2 class="grid-header">Mats</h2>
+        <div class="card-grid visible" id="matsGrid"></div>
+    </div>
+
+    <div class="grid-container">
+        <h2 class="grid-header">Prophecies</h2>
+        <div class="card-grid visible" id="propheciesCardGrid"></div>
+    </div>
+
+    <div class="grid-container">
+        <h2 class="grid-header">Rings</h2>
+        <div class="card-grid visible" id="ringsCardGrid"></div>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <img id="enlargedCard" alt="Enlarged Card">
+        <button class="removeCard">Remove</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
